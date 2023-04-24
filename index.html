@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="conteiner">
+        <section>
+            <div class="texto">
+                <textarea name="texto" id="texto-input" class="texto-input" cols="texto" rows="texto" placeholder="Ingresa tu texto"></textarea>
+
+                <div class="buttoms">
+                    <!-- <button class="encrip" id="encrip" onclick="encriptar()"><p>Encriptar</p></button> -->
+                    <a href="#" class="encrip" id="encrip" onclick="encriptar()"><p>Encriptar</p></a>
+                </div>
+
+                <div class="buttoms">
+                    <!-- <button class="decrypt" id="decrypt" onclick="desencriptar()"><p>Desencritar</p></button> -->
+                    <a href="#" class="decrypt" id="decrypt" onclick="desencriptar()"><p>Desencritar</p></a>
+                </div>
+
+                <p class="instrucciones">solo se pueden usar letras minuscolas</p>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="text-encrip">
+                <textarea class="text" id="text"></textarea>
+
+                <div class="buttoms">
+                    <!-- <button class="copy" id="copy" onclick="copy()"><p>Copiar</p></button> -->
+                    <a href="#" class="copy" id="copy" onclick="copy()"><p>Copiar</p></a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

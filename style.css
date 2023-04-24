@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgb(0, 94, 255), rgb(255, 0, 0));
+    background-repeat: no-repeat;
+}
+
+.conteiner{
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+}
+
+.texto{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+.texto-input{
+    position: static;
+    width: 400px;
+    height: 150px;
+    align-items: center;
+
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%;
+
+     
+    border: none;
+    outline: none;
+
+    color: #000;
+    box-shadow: 0 10px 10px 8px rgba(rgb(0, 94, 226), green, blue, alpha);
+}
+
+.text-encrip{
+    position: absolute;
+    width: 250px;
+    height: 540px;
+    left: 780px;
+    top: 20px;
+
+    background: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.text{
+    position: absolute;
+    width: 210px;
+    height: 390px;
+    left: 20px;
+    top: 20px;
+
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+
+    color: #000;
+    border: none;
+    outline: none;
+}
+
+
+.instrucciones{
+    width: 228px;
+    height: 18px;
+    position: absolute;
+    left: -15;
+    top: 180%;
+
+    font-family: 'Inter';
+    font-style: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+
+    color: #fff;
+
+    opacity: 0.8;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+/*BUTTONS*/
+
+.buttoms a{
+    display: flex;
+    position: absolute;
+    width: 170px;
+    height: 50px;
+
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.buttoms p{
+    left: 40px;
+    z-index: 1;
+}
+
+.encrip{
+    overflow: hidden;
+    position: relative;
+    left: -10%;
+    top: 195%;
+
+    color: #fff;
+    padding: 17px 55px;
+    border-radius: 30px;
+    box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5),
+                0 0 0 0 rgba(39, 200, 255, 0.5);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.decrypt{
+    position: absolute;
+    left: 50%;
+    top: 195%;
+
+    background: #FF0000;
+    padding: 18px 40px;
+    color: #fff;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.copy{
+    position: static;
+    left: 20%;
+    top: 80%;
+
+    border: 0.25EM SOLID #02d8ff;
+    padding: 15px 49px;
+    color: #02d8ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #000;
+    box-shadow: 0 0 1em 0.25em #02d8ff,
+                0 0 4em 1em rgba(3, 205, 241, 0.78),
+                inset 0 0 0.75em 0.25em #02d8ff;
+    text-shadow: 0 0 0.5em #02d8ff;
+    position: relative;
+    transition: .3s;
+}
+
+/*EFECTO DE BOTONES*/
+
+/*BUTTOM ENCRIPT*/
+
+.encrip::after{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -50px;
+    left: -100px;
+    background-color: #1700FD;
+    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+
+    z-index: -100;
+    transition: transform 0.5s ease;
+}
+
+.encrip::hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5),
+                -10px 10px 25px 0 rgba(39, 200, 255, 0.5);
+}
+
+.encrip:hover::after{
+    transform: rotate(150deg);
+}
+
+/*BUTTOM DECRYPT*/
+
+.decrypt::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 110%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(80deg, #8e2de2, #4a00e0);
+    transition: .2s ;
+}
+
+.decrypt:hover::before{
+    transform: scaleX(1);
+}
+
+/*BUTTON COPY*/
+
+.copy:hover{
+    color: #021301;
+    background-color: #02d8ff;
+    box-shadow: 0 0 1em 0.25em #02d8ff,
+                0 0 4em 1em rgba(3, 205, 241, 0.78),
+                inset 0 0 0.75em 0.25em #02d8ff;
+}
