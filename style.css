@@ -5,13 +5,12 @@
 }
 
 body{
-    background-image: linear-gradient(to bottom right, rgb(0, 94, 255), rgb(255, 0, 0));
-    background-repeat: no-repeat;
+    background-color: #7BA5BA;
 }
 
 .conteiner{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     font-family: sans-serif;
 }
 
@@ -30,14 +29,16 @@ body{
     font-family: 'inter';
     font-style: normal;
     font-weight: 400;
-    font-size:30px;
+    font-size:35px;
     line-height: 150%;
+    
 
      
     border: none;
     outline: none;
 
     color: #000;
+    border-radius: 20px;
     box-shadow: 0 10px 10px 8px rgba(rgb(0, 94, 226), green, blue, alpha);
 }
 
@@ -217,4 +218,130 @@ body{
     box-shadow: 0 0 1em 0.25em #02d8ff,
                 0 0 4em 1em rgba(3, 205, 241, 0.78),
                 inset 0 0 0.75em 0.25em #02d8ff;
+}
+
+/*ADAPTACION DE DISPOSITIVOS*/
+
+@media screen and (max-width: 1400px){
+  .texto{
+    width: 570px;
+    height: 242px;
+  }
+
+  .texto-input{
+    width: 466px;
+    height: 247px;
+  }
+
+  .text-encrip{
+    left: 880px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+    .texto-input{
+        width: 296px;
+        height: 253px;
+        position: absolute;
+        top: -150px;
+        left: -10%;
+    }
+
+    .instrucciones{
+        top: 120px;
+        left: -5%;
+    }
+
+   .encrip{
+    width: 700px;
+    height: 700px;
+    top: 150px;
+   }
+
+   .decrypt{
+    position: absolute;
+    width: 1000px;
+    height: 700px;
+    left: -17px;
+    top: 235px;
+   }
+
+   .text-encrip{
+    position: absolute;
+    width: 360px;
+    height: 340px;
+    left: 1px;
+    top: 500px;
+   }
+
+   .text{
+    width: 316px;
+    height: 219px;
+    top: 25px;
+    border-radius: 20px;
+   }
+
+   .copy{
+    left: 85px;
+    top: 266px;
+   }
+
+   /*EFECTO DE BOTONES*/
+
+/*BUTTOM ENCRIPT*/
+
+.encrip::after{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -50px;
+    left: -100px;
+    background-color: #1700FD;
+    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+
+    z-index: -100;
+    transition: transform 0.5s ease;
+}
+
+.encrip::hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5),
+                -10px 10px 25px 0 rgba(39, 200, 255, 0.5);
+}
+
+.encrip:hover::after{
+    transform: rotate(150deg);
+}
+
+/*BUTTOM DECRYPT*/
+
+.decrypt::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 110%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(80deg, #8e2de2, #4a00e0);
+    transition: .2s ;
+}
+
+.decrypt:hover::before{
+    transform: scaleX(1);
+}
+
+/*BUTTON COPY*/
+
+.copy:hover{
+    color: #021301;
+    background-color: #02d8ff;
+    box-shadow: 0 0 1em 0.25em #02d8ff,
+                0 0 4em 1em rgba(3, 205, 241, 0.78),
+                inset 0 0 0.75em 0.25em #02d8ff;
+}
+
 }
